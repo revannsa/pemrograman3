@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class array2dim
+{
+    public static void main (String args[])
+    {
+        System.out.print('\u000C');
+        int input_b,input_k,index;
+        Scanner s = new Scanner (System.in);
+        System.out.print ("Masukkan Banyak Baris : ");
+        input_b= s.nextInt();
+        System.out.print ("Masukkan Banyak Kolom : ");
+        input_k= s.nextInt();
+        String [][] z= new String [input_b][input_k];
+        for (int k=0; k<input_b*input_k; k++)
+        {
+            System.out.print ("Masukkan Nilai Ke ["+k/input_k+"]["+k%input_k+"]:");
+            z[k/input_k][k%input_k]= s.next();
+        }
+        for (int k=0; k<input_b*input_k; k++)
+        {
+            System.out.print(z[k/input_k][k%input_k]+"\t\t");
+            if(k%input_k==input_k - 1)
+            {
+                System.out.println();
+            }
+        }
+    }
+}
